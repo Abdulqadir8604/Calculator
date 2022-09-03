@@ -4,14 +4,17 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">0dp</item>
         <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginStart">5dp</item>
+        <item name="android:layout_marginEnd">5dp</item>
     </style>
     <style name="buttonNumber">
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_weight">1</item>
-        <item name = "android:layout_margin">5dp</item>
-        <item name="android:background">@color/almostBlack</item>
-        <item name="android:textSize">25sp</item>
+        <item name ="android:layout_margin">5dp</item>
+        <item name="android:background">@drawable/button_shape</item>
+        <item name="android:textSize">35sp</item>
+        <item name="android:foregroundGravity">center</item>
         <item name="android:textColor">@color/white</item>
     </style>
 
@@ -20,8 +23,10 @@
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_weight">1</item>
         <item name = "android:layout_margin">5dp</item>
-        <item name="android:background">@color/almostBlack</item>
-        <item name="android:textSize">25sp</item>
-        <item name="android:textColor">@color/blue</item>
+        <item name="android:foregroundGravity">center</item>
+        <item name="android:background">@drawable/button_shape</item>
+        <item name="backgroundTint">@color/blue</item>
+        <item name="android:textSize">35sp</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 </resources>

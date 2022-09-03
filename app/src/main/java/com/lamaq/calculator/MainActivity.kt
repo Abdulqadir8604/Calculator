@@ -2,12 +2,10 @@ package com.lamaq.calculator
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.icu.lang.UCharacter.GraphemeClusterBreak.V
 import android.os.Bundle
 import android.os.Vibrator
-import android.view.HapticFeedbackConstants
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.graphics.toColor
 import com.lamaq.calculator.databinding.ActivityMainBinding
 import net.objecthunter.exp4j.ExpressionBuilder
 
@@ -20,7 +18,7 @@ private lateinit var binding: ActivityMainBinding
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        var v : Vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+        val v : Vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
 
         binding.btnAc.setOnClickListener {
             binding.workingsTV.text = ""
@@ -80,7 +78,7 @@ private lateinit var binding: ActivityMainBinding
             v.vibrate(50)
             val expressionIn =
                 binding.workingsTV.text.toString().replace("÷", "/").replace("×", "*")
-                    .replace("%", "/100")
+                    .replace("%", "/100*100")
             try {
                 val expressionBuilder = ExpressionBuilder(expressionIn).build()
                 val evaluate = expressionBuilder.evaluate()
